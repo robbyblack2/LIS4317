@@ -1,0 +1,47 @@
+---
+title: "Module 12"
+author: "Robert Black"
+date: "2025-11-16"
+output: html_document
+---
+
+## Introduction
+
+R Markdown is a simple way to combine text, code, and results in a single document. It lets you write reports that include formatted text, math, and live R code.
+
+## What is R Markdown?
+
+R Markdown uses Markdown syntax for formatting and lets you embed R code chunks. When you knit the document, the code runs and the results appear in the output.
+
+## At least one LaTeX math expression: 
+Inline Expression  $\alpha + \beta = \gamma$.
+
+And a displayed equation:
+$$
+E = mc^2
+$$
+
+## At least two executable R code chunks that part 1
+
+Show a summary
+
+```{r}
+data(mtcars)
+summary(mtcars)
+```
+
+## At least two executable R code chunks that part 2
+
+Show a plot
+
+```{r}
+library(ggplot2)
+ggplot(mtcars, aes(x=wt, y=mpg)) + geom_point() + theme_minimal()
+```
+
+## Reflection
+
+Using R Markdown makes displaying reports and other information much easier and quicker than writing plain reports. The biggest advantage of R Markdown is the efficiency and speed gained when creating reports with this method. However, if your requirements call for more control over webpage design, R Markdown may not be the best option, as it does not offer enough features for advanced design modifications.
+---
+
+*Tip: If something looks odd, check your chunk options and Markdown formatting. Preview often!*
