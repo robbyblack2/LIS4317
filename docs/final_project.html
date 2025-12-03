@@ -16,9 +16,108 @@
                 <p>CDC Open Data Portal:</p>
                 <p>Mortality statistics for each U.S. state by year, grouped by cause of death</p>
                 <p><link>https://data.cdc.gov/resource/bi63-dtpu.csv?$limit=500000</link></p>
+                <p>
+                    I chose this dataset because it is a trusted source the CDC. This dataset also contains clean numeric and categorical data, and allows meaningful analysis of national health trends over time.
+                </p>        
             </div>
         </div>
-       
+        <div class="card mt-3">
+            <div class="card-body">
+                <h3>Problem Description/Purpose</h3>
+                <p>
+                This project analyzes major mortality trends in the United States between 1999 and 2017. 
+                The key research questions explored are:
+                </p>
+                <ul>
+                <li>How have age-adjusted death rates changed over time?</li>
+                <li>Which causes of death account for the highest total deaths?</li>
+                <li>How variable are death rates across the population?</li>
+                <li>How do trends differ for a specific cause in a specific state?</li>
+                </ul>
+                <p>
+                The goal is to identify patterns, compare leading causes, 
+                and understand long-term public health changes using reliable CDC data.
+                </p>
+            </div>
+        </div>
+        <div class="card mt-3">
+            <div class="card-body"></div>
+                <h3>Related Work</h3>
+                <p>
+                The CDC provides national dashboards for mortality surveillance,
+                which inspired this analysis. 
+                Other public health visualizations, such as CDC WONDER and annual mortality reports,
+                use similar techniques including line charts, bar charts, and heatmaps
+                to communicate changes in causes of death over time. 
+                This project applies the same style of analytical approach using Python.
+                </p>
+            </div>
+        </div>
+        <div class="card mt-3">
+            <div class="card-body"></div>
+                <h3>Solution & Technical Approach</h3>
+                <p>
+                All analysis was completed using <b>Python</b> with the libraries 
+                <b>Pandas</b>, <b>Matplotlib</b>, and <b>Seaborn</b>. 
+                The process included:
+                </p>
+                <ol>
+                <li>Loading the dataset directly from the CDC API</li>
+                <li>Cleaning the data by renaming fields and removing missing values</li>
+                <li>Creating required visualizations:
+                    <ul>
+                        <li>Time series line chart</li>
+                        <li>Ranking bar chart</li>
+                        <li>Distribution histogram</li>
+                        <li>State-level trend chart</li>
+                        <li>Multivariate heatmap</li>
+                    </ul>
+                </li>
+                <li>Interpreting each visualization to form conclusions</li>
+                </ol>
+                <p>
+                This approach follows the statistical visualization techniques from Chapter 13,
+                including trend detection, ranking, distribution analysis, and multivariate comparison.
+                </p>
+            </div>
+        </div>
+        <h3>Visualizations & Interpretation</h3>
+
+        <h5>1. U.S. Age-Adjusted Mortality Trend</h5>
+        <img src="trend_us_age_adjusted_rate.png" class="img-fluid">
+        <p>
+        Death rates show a gradual downward trend from 1999–2017,
+        reflecting improvements in healthcare, disease prevention, and treatment.
+        </p>
+
+        <h5>2. Top 10 Causes of Death</h5>
+        <img src="top_10_causes.png" class="img-fluid">
+        <p>
+        Heart disease and cancer overwhelmingly account for the highest number of deaths,
+        far greater than any other cause. Accidents, stroke, and chronic respiratory
+        diseases follow.
+        </p>
+
+        <h5>3. Distribution of Age-Adjusted Rates</h5>
+        <img src="distribution_age_adjusted_rate.png" class="img-fluid">
+        <p>
+        The distribution shows most death rates cluster between 50–100 per 100k,
+        indicating consistent mortality levels across many states and causes.
+        </p>
+
+        <h5>4. Florida Heart Disease Trend</h5>
+        <img src="state_trend_florida_heart_disease.png" class="img-fluid">
+        <p>
+        Heart disease mortality in Florida steadily declines over time,
+        mirroring the national drop in cardiovascular deaths.
+        </p>
+
+        <h5>5. Heatmap: Causes vs Year</h5>
+        <img src="heatmap_cause_vs_year.png" class="img-fluid">
+        <p>
+        This multivariate heatmap highlights how different causes of death shift over time.
+        Certain causes decline sharply (e.g., stroke), while others remain steady.
+        </p>
     </div>
 </body>
 </html>
