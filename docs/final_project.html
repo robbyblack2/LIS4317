@@ -24,15 +24,15 @@
         <div class="card mt-3">
             <div class="card-body">
                 <h3>Problem Description/ Purpose</h3>
-                <p>The purpose fo this project is to answer the following questions</p>
+                <p>The purpose of this project is to answer the following questions:</p>
                 <ul>
                 <li>How have age-adjusted death rates changed over time?</li>
-                <li>Which causes the highest amounts of deaths?</li>
+                <li>Which causes account for the highest number of deaths?</li>
                 <li>How variable are death rates across the population?</li>
                 <li>How do trends differ for a specific cause in a specific state?</li>
                 </ul>
                 <p>
-                The goal of this project is to identify trends and patterns in the causation of death in the USA between 1999 and 2017.
+                The goal of this project is to identify trends and patterns in the causes of death in the USA between 1999 and 2017.
                 </p>
             </div>
         </div>
@@ -40,11 +40,11 @@
             <div class="card-body">
                 <h3>Solution & Technical Approach</h3>
  
-                <p>I completed this project using python with the following libraries Pandas,Matplotlib and Seaborn.
-                     The data is fetched from a CDC web endpoint when the script is ran and saved to a pandas dataframe
-                    The data is then cleand and transformed corrected field types and nullable values. 
-                    This dataset come extremely normalized from the API and little transformation is needed.
-                    From this cleaned datafrom i then generated all 5 visulizations for this project.
+                <p>I completed this project using Python with the following libraries: Pandas, Matplotlib, and Seaborn.
+                     The data is fetched from a CDC web endpoint when the script is run and saved to a pandas DataFrame.
+                    The data is then cleaned and transformed, correcting field types and handling null values. 
+                    This dataset comes extremely normalized from the API and little transformation is needed.
+                    From this cleaned DataFrame, I then generated all 5 visualizations for this project.
                 </p>
                 
 
@@ -78,6 +78,8 @@
                 Death rates show a gradual downward trend from 1999–2017,
                 reflecting improvements in healthcare, disease prevention, and treatment.
                 </p>
+                <img src="assets/trend.png" class="img-fluid">
+                
 
                 <h5>2. Top 10 Causes of Death</h5>
                 <img src="assets/top_10_causes.png" class="img-fluid">
@@ -86,56 +88,48 @@
                 far greater than any other cause. Accidents, stroke, and chronic respiratory
                 diseases follow.
                 </p>
-
+                <img src="assets/cause.png" class="img-fluid">
+                
                 <h5>3. Distribution of Age-Adjusted Rates</h5>
                 <img src="assets/distribution_age_adjusted_rate.png" class="img-fluid">
                 <p>
                 The distribution shows most death rates cluster between 50–100 per 100k,
                 indicating consistent mortality levels across many states and causes.
                 </p>
-
+                <img src="assets/distribution.png" class="img-fluid">
+                
                 <h5>4. Florida Heart Disease Trend</h5>
                 <img src="assets/state_trend_florida_heart_disease.png" class="img-fluid">
                 <p>
                 Heart disease mortality in Florida steadily declines over time,
                 mirroring the national drop in cardiovascular deaths.
                 </p>
-
+                <img src="assets/florida.png" class="img-fluid">
+                
                 <h5>5. Heatmap: Causes vs Year</h5>
                 <img src="assets/heatmap_cause_vs_year.png" class="img-fluid">
                 <p>
                 This multivariate heatmap highlights how different causes of death shift over time.
                 Certain causes decline sharply (e.g., stroke), while others remain steady.
                 </p>
+                <img src="assets/heatmap.png" class="img-fluid">
+                
             </div>
         </div>
          <div class="card mt-3">
             <div class="card-body">
                 <h3>Conclusion</h3>
+             
                 <p>
-                Overall, this project helped me better understand major health trends in the United States by analyzing the CDC Leading
-                Causes of Death dataset. After looking at the data from 1999–2017, one of the biggest takeaways is that age-adjusted
-                death rates have steadily decreased over time. This suggests that healthcare, prevention, and treatment have continued to
-                improve. Heart disease and cancer still remain the leading causes of death, but many other causes show gradual declines as well.
-                </p>
-                <p>In conculsion this porject successfully help me identify health trends in the United States by analysising CDC dataset
-                    After anslysis the data key patterns show that age asjusted death rates have steadily decreased overtime.
-                    This can be assoicated with increases in health care and treatment prevention that have prolonged american lives.
+                    In conclusion, this project successfully helped me identify health trends in the United States by analyzing the CDC dataset.
+                    After analyzing the data, key patterns show that age-adjusted death rates have steadily decreased over time.
+                    This can be associated with increases in health care and treatment/prevention that have prolonged American lives.
                 </p>
                 <p>
-                    Through the visulizations you can see these patterns clearly.
-                </p>
-                <p>
-                The different visualizations made these patterns much easier to see. The trend line clearly shows the long-term drop in 
-                death rates, the ranking chart highlights how dominant the top causes are, and the distribution chart shows how similar 
-                the death rates are across many states. The Florida heart disease chart also showed the same downward trend on a more 
-                local level. The heatmap tied everything together by showing how different causes of death have changed over time.
-                </p>
-
-                <p>
-                Overall, this project showed me how powerful visual analytics can be when working with large public health datasets.
-                It helped turn millions of rows of data into something understandable and meaningful. In the future, it would be interesting 
-                to explore differences between regions, age groups, or factors that may have caused sudden changes in certain years.
+                    The different visualizations made these patterns much easier to see. The trend line clearly shows the long-term drop in 
+                    death rates, the ranking chart highlights how dominant the top causes are, and the distribution chart shows how similar 
+                    the death rates are across many states. The Florida heart disease chart also showed the same downward trend on a more 
+                    local level. The heatmap tied everything together by showing how different causes of death have changed over time.
                 </p>
             </div>
         </div>

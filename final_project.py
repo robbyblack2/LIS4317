@@ -11,7 +11,6 @@ def load_data():
     return df
 
 def clean_data(df):
-    print("Cleaning data...")
 
     df = df.rename(columns={
         'year': 'Year',
@@ -25,10 +24,9 @@ def clean_data(df):
     df = df.dropna()
     df['Year'] = df['Year'].astype(int)
 
-    print("Cleaning complete.")
     return df
 
-# ---- 1. U.S. Trend Over Time ----
+# Trend Line
 def plot_trend(df):
     plt.figure(figsize=(12, 6))
     sns.lineplot(data=df, x='Year', y='Age Adjusted Rate', ci=None)
@@ -38,7 +36,7 @@ def plot_trend(df):
     print("Saved: trend_us_age_adjusted_rate.png")
 
 
-# ---- 2. Top 10 Causes of Death ----
+# Top 10 Causes of Death
 def plot_top_causes(df):
     cause_totals = (
         df.groupby("Cause Name")["Deaths"]
@@ -55,7 +53,7 @@ def plot_top_causes(df):
     plt.close()
 
 
-# ---- 3. Distribution of Age Adjusted Rates ----
+# Age Distribution
 def plot_distribution(df):
     plt.figure(figsize=(10, 6))
     sns.histplot(df['Age Adjusted Rate'], bins=30, kde=True)
@@ -64,7 +62,7 @@ def plot_distribution(df):
     plt.close()
 
 
-# ---- 4. State Trend for Florida Heart Disease ----
+# Florida Heart Disease
 def plot_state_trend(df, state="Florida", cause="Heart disease"):
     subset = df[(df['State'] == state) & (df['Cause Name'] == cause)]
 
@@ -75,7 +73,7 @@ def plot_state_trend(df, state="Florida", cause="Heart disease"):
     plt.close()
 
 
-# ---- 5. Heatmap of Causes vs Year ----
+# Heatmap
 def plot_heatmap(df):
     pivot = df.pivot_table(
         index='Cause Name',
