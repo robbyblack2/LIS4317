@@ -11,8 +11,8 @@
         <h1 class="text-center">LIS 4317 Final Project</h1>
         <hr>
         <div class="card mx-auto">
-            <h3 class="card-head">Dataset</h3>
             <div class="card-body">
+                <h3>Dataset</h3>
                 <p>CDC Open Data Portal:</p>
                 <p>Mortality statistics for each U.S. state by year, grouped by cause of death</p>
                 <p><link>https://data.cdc.gov/resource/bi63-dtpu.csv?$limit=500000</link></p>
@@ -23,45 +23,32 @@
         </div>
         <div class="card mt-3">
             <div class="card-body">
-                <h3>Problem Description/Purpose</h3>
-                <p>
-                This project analyzes major mortality trends in the United States between 1999 and 2017. 
-                The key research questions explored are:
-                </p>
+                <h3>Problem Description/ Purpose</h3>
+                <p>The purpose fo this project is to answer the following questions</p>
                 <ul>
                 <li>How have age-adjusted death rates changed over time?</li>
-                <li>Which causes of death account for the highest total deaths?</li>
+                <li>Which causes the highest amounts of deaths?</li>
                 <li>How variable are death rates across the population?</li>
                 <li>How do trends differ for a specific cause in a specific state?</li>
                 </ul>
                 <p>
-                The goal is to identify patterns, compare leading causes, 
-                and understand long-term public health changes using reliable CDC data.
-                </p>
-            </div>
-        </div>
-        <div class="card mt-3">
-            <div class="card-body">
-                <h3>Related Work</h3>
-                <p>
-                The CDC provides national dashboards for mortality surveillance,
-                which inspired this analysis. 
-                Other public health visualizations, such as CDC WONDER and annual mortality reports,
-                use similar techniques including line charts, bar charts, and heatmaps
-                to communicate changes in causes of death over time. 
-                This project applies the same style of analytical approach using Python.
+                The goal of this project is to identify trends and patterns in the causation of death in the USA between 1999 and 2017.
                 </p>
             </div>
         </div>
         <div class="card mt-3">
             <div class="card-body">
                 <h3>Solution & Technical Approach</h3>
-                <p>
-                All analysis was completed using <b>Python</b> with the libraries 
-                <b>Pandas</b>, <b>Matplotlib</b>, and <b>Seaborn</b>. 
-                The process included:
+ 
+                <p>I completed this project using python with the following libraries Pandas,Matplotlib and Seaborn.
+                     The data is fetched from a CDC web endpoint when the script is ran and saved to a pandas dataframe
+                    The data is then cleand and transformed corrected field types and nullable values. 
+                    This dataset come extremely normalized from the API and little transformation is needed.
+                    From this cleaned datafrom i then generated all 5 visulizations for this project.
                 </p>
-                <ol>
+                
+
+
                 <li>Loading the dataset directly from the CDC API</li>
                 <li>Cleaning the data by renaming fields and removing missing values</li>
                 <li>Creating required visualizations:
@@ -122,7 +109,6 @@
                 </p>
             </div>
         </div>
-        
     </div>
 </body>
 </html>
